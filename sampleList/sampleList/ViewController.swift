@@ -31,6 +31,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(animall[indexPath.row])
+        let sb = UIStoryboard(name: "Second", bundle: nil)
+        let vc = sb.instantiateInitialViewController() as! SecondViewController
+        present(vc, animated: true, completion: nil)
     }
     
     
